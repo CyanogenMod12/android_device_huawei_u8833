@@ -54,18 +54,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril.config=qcomdsds,skippinpukcount,signalstrength \
     ro.telephony.ril_class=HuaweiRIL
 
-# FM Radio
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fm.analogpath.supported=false \
-    ro.fm.transmitter=false \
-    ro.fm.mulinst.recording.support=false
-
-PRODUCT_PACKAGES += \
-   FM2 \
-   FMRecord \
-   libqcomfm_jni \
-   qcom.fmradio
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
