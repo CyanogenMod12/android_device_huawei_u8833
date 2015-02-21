@@ -1,0 +1,601 @@
+From 7d01a47bd8640eb1516246141d6e2074d0daf1a3 Mon Sep 17 00:00:00 2001
+From: David Vaz Guijarro <vazdavid@icloud.com>
+Date: Sat, 21 Feb 2015 09:41:58 +0100
+Subject: [PATCH] CM12 OTA
+
+---
+ res/values-af/cm_strings.xml                     |  1 -
+ res/values-ar/cm_strings.xml                     |  1 -
+ res/values-ast-rES/cm_strings.xml                |  1 -
+ res/values-bn-rBD/cm_strings.xml                 |  1 -
+ res/values-ca/cm_strings.xml                     |  2 +-
+ res/values-cs/cm_strings.xml                     |  1 -
+ res/values-da/cm_strings.xml                     |  1 -
+ res/values-de/cm_strings.xml                     |  1 -
+ res/values-el/cm_strings.xml                     |  1 -
+ res/values-es/cm_strings.xml                     |  2 +-
+ res/values-eu-rES/cm_strings.xml                 |  1 -
+ res/values-fi/cm_strings.xml                     |  1 -
+ res/values-fr/cm_strings.xml                     |  1 -
+ res/values-hu/cm_strings.xml                     |  1 -
+ res/values-in/cm_strings.xml                     |  1 -
+ res/values-it/cm_strings.xml                     |  1 -
+ res/values-iw/cm_strings.xml                     |  1 -
+ res/values-ja/cm_strings.xml                     |  1 -
+ res/values-ko/cm_strings.xml                     |  1 -
+ res/values-ku/cm_strings.xml                     |  1 -
+ res/values-lb/cm_strings.xml                     |  1 -
+ res/values-lt/cm_strings.xml                     |  1 -
+ res/values-lv/cm_strings.xml                     |  1 -
+ res/values-nb/cm_strings.xml                     |  1 -
+ res/values-nl/cm_strings.xml                     |  1 -
+ res/values-pl/cm_strings.xml                     |  1 -
+ res/values-pt-rBR/cm_strings.xml                 |  1 -
+ res/values-pt-rPT/cm_strings.xml                 |  1 -
+ res/values-ro/cm_strings.xml                     |  1 -
+ res/values-ru/cm_strings.xml                     |  1 -
+ res/values-si-rLK/cm_strings.xml                 |  1 -
+ res/values-sk/cm_strings.xml                     |  1 -
+ res/values-sr/cm_strings.xml                     |  1 -
+ res/values-sv/cm_strings.xml                     |  1 -
+ res/values-th/cm_strings.xml                     |  1 -
+ res/values-tr/cm_strings.xml                     |  1 -
+ res/values-uk/cm_strings.xml                     |  1 -
+ res/values-zh-rCN/cm_strings.xml                 |  1 -
+ res/values-zh-rHK/cm_strings.xml                 |  1 -
+ res/values-zh-rTW/cm_strings.xml                 |  1 -
+ res/values/cm_strings.xml                        |  4 ++--
+ res/xml/device_info_settings.xml                 | 12 ++++++------
+ src/com/android/settings/DeviceInfoSettings.java |  6 +++---
+ 43 files changed, 13 insertions(+), 51 deletions(-)
+
+diff --git a/res/values-af/cm_strings.xml b/res/values-af/cm_strings.xml
+index 42c7943..eb6a76b 100644
+--- a/res/values-af/cm_strings.xml
++++ b/res/values-af/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Filter kennisgewings</string>
+   <string name="block_notifications_summary">Bestuur geïgnoreerde kennisgewings en ​​filters</string>
+   <string name="no_filters_title">Geen filters opgestel</string>
+-  <string name="cmupdate_settings_title">CyanogenMod opgradering</string>
+   <string name="update_recovery_title">Opdateer Cyanogen recovery</string>
+   <string name="update_recovery_summary">Opdateer recovery met stelsel opdaterings</string>
+   <string name="update_recovery_on_warning">KENNISGEWING: Wanneer hierdie funksie geaktiveer is, sal jou geïnstalleerde recovery vervang word deur een ingesluit met die huidige weergawe van die Beheer Stelsel\n\nJou recovery sal opgedateer word saam met die opgraderings aan jou stelsel, dit help om versoenbaarheid te verseker van toekomstige weergawes.\n\nWil jy hierdie funksie aktiveer?</string>
+diff --git a/res/values-ar/cm_strings.xml b/res/values-ar/cm_strings.xml
+index 708a066..4819150 100644
+--- a/res/values-ar/cm_strings.xml
++++ b/res/values-ar/cm_strings.xml
+@@ -165,7 +165,6 @@
+   <string name="sms_security_check_limit_summary">تطبيقات يمكن إرسال رسائل %d في 30 دقيقة قبل المطالبة بتأكيد</string>
+   <string name="block_notifications_title">تصفية شريط الإعلام</string>
+   <string name="block_notifications_summary">إدارة اﻹشعارات التي تم تجاهلها والمرشحات</string>
+-  <string name="cmupdate_settings_title">تحديثات CyanogenMod</string>
+   <string name="mod_version">إصدار CyanogenMod</string>
+   <string name="mod_version_default">غير معروف</string>
+   <string name="build_date">تاريخ الإصدار</string>
+diff --git a/res/values-ast-rES/cm_strings.xml b/res/values-ast-rES/cm_strings.xml
+index 91bbabe..a8298bc 100644
+--- a/res/values-ast-rES/cm_strings.xml
++++ b/res/values-ast-rES/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Filtriar notificaciones</string>
+   <string name="block_notifications_summary">Remanar filtros y notificaciones bloquiaes</string>
+   <string name="no_filters_title">Nun hai filtros afitaos</string>
+-  <string name="cmupdate_settings_title">Anovamientos CyanogenMod</string>
+   <string name="update_recovery_title">Anovar col recovery de Cyanogen</string>
+   <string name="update_recovery_summary">Anovar recovery colos anovamientos del sistema</string>
+   <string name="update_recovery_on_warning">AVISU: Cuando esta función ta activada, el recovery instaláu va sustituyise por ún incluyíu cola versión actual del SO.\n\nEl recovery va anovase xunto con meyores del sistema, ayudando a garantizar la compatibilidá con futures versiones.\n\n¿Quies activar esta función?</string>
+diff --git a/res/values-bn-rBD/cm_strings.xml b/res/values-bn-rBD/cm_strings.xml
+index b12813f..26853cd 100644
+--- a/res/values-bn-rBD/cm_strings.xml
++++ b/res/values-bn-rBD/cm_strings.xml
+@@ -174,7 +174,6 @@
+   <string name="sms_security_check_limit_summary">অ্যাপ ৩০ মিনিটের মধ্যে %d টি বার্তা পাঠাতে পারবে, আগে নিশ্চিতকরণ প্রয়োজন</string>
+   <string name="block_notifications_title">ফিল্টার নোটিফিকেশনস</string>
+   <string name="block_notifications_summary">উপেক্ষিত নোটিফিকেশনস এবং ফিল্টার নিয়ন্ত্রণ করুন</string>
+-  <string name="cmupdate_settings_title">সায়ানোজেনমড আধুনিকীকরণ</string>
+   <string name="mod_version">সায়ানোজেনমড সংস্করণ</string>
+   <string name="mod_version_default">অজানা</string>
+   <string name="build_date">তৈরী তারিখ</string>
+diff --git a/res/values-ca/cm_strings.xml b/res/values-ca/cm_strings.xml
+index f297d5b..4aa62de 100644
+--- a/res/values-ca/cm_strings.xml
++++ b/res/values-ca/cm_strings.xml
+@@ -206,7 +206,7 @@
+   <string name="block_notifications_title">Filtra les notificacions</string>
+   <string name="block_notifications_summary">Gestiona les notificacions i filtres ignorats</string>
+   <string name="no_filters_title">Sense filtres establerts</string>
+-  <string name="cmupdate_settings_title">Actualitzacions CyanogenMod</string>
++  <string name="independentupdater_settings_title">Actualitzacions CyanogenMod</string>
+   <string name="update_recovery_title">Actualitza la recuperació de Cyanogen</string>
+   <string name="update_recovery_summary">Actualitza la recuperació amb les actualitzacions del sistema</string>
+   <string name="update_recovery_on_warning">AVÍS: Quan aquesta funció estigui activada, la recuperació que tinguis instal·lada serà substituïda per la versió actual inclosa amb el SO instal·lat.\n\nEl teu sistema de recuperació s\'actualitzarà juntament amb les millores del sistema, ajudant a assegurar la compatibilitat amb futures versions.\n\nVols habilitar aquesta característica?</string>
+diff --git a/res/values-cs/cm_strings.xml b/res/values-cs/cm_strings.xml
+index 69e337c..c76eb50 100644
+--- a/res/values-cs/cm_strings.xml
++++ b/res/values-cs/cm_strings.xml
+@@ -207,7 +207,6 @@
+   <string name="block_notifications_title">Oznámení filtru</string>
+   <string name="block_notifications_summary">Spravovat ignorovaná upozornění a filtry</string>
+   <string name="no_filters_title">Nenastaven žádný filtr</string>
+-  <string name="cmupdate_settings_title">Aktualizace CyanogenMod</string>
+   <string name="update_recovery_title">Aktualizovat Cyanogen recovery</string>
+   <string name="update_recovery_summary">Aktualizovat recovery pomocí aktualizace systému</string>
+   <string name="update_recovery_on_warning">UPOZORNĚNÍ: Pokud je tato funkce zapnutá, vaše nainstalované recovery bude nahrazeno aktuální verzí z právě nainstalovaného systému.\n\nOddíl recovery bude aktualizován současně s aktualizací systému, čímž bude zajištěna kompatibilita s budoucími verzemi.\n\nChcete povolit tuto funkci?</string>
+diff --git a/res/values-da/cm_strings.xml b/res/values-da/cm_strings.xml
+index 941c7d0..4ca1280 100644
+--- a/res/values-da/cm_strings.xml
++++ b/res/values-da/cm_strings.xml
+@@ -173,7 +173,6 @@
+   <string name="sms_security_check_limit_summary">Vis en advarselsdialog for at forhindre programmer i at sende SMS-beskeder for ofte. Aktuel grænse: %d beskeder på 30 minutter (kræver genstart)</string>
+   <string name="block_notifications_title">Filtrere meddelelser</string>
+   <string name="block_notifications_summary">Administrere ignoreret underretninger og filtre</string>
+-  <string name="cmupdate_settings_title">CyanogenMod-opdateringer</string>
+   <string name="mod_version">CyanogenMod-version</string>
+   <string name="mod_version_default">Ukendt</string>
+   <string name="build_date">Kørselsdato</string>
+diff --git a/res/values-de/cm_strings.xml b/res/values-de/cm_strings.xml
+index a9e9068..36b85cb 100644
+--- a/res/values-de/cm_strings.xml
++++ b/res/values-de/cm_strings.xml
+@@ -205,7 +205,6 @@
+   <string name="block_notifications_title">Benachrichtigungen filtern</string>
+   <string name="block_notifications_summary">Ignorierte Benachrichtigungen und Filter verwalten</string>
+   <string name="no_filters_title">Keine Filter aktiv</string>
+-  <string name="cmupdate_settings_title">CyanogenMod-Updates</string>
+   <string name="update_recovery_title">CM-Recovery aktualisieren</string>
+   <string name="update_recovery_summary">Recovery bei System-Updates aktualisieren</string>
+   <string name="mod_version">CyanogenMod-Version</string>
+diff --git a/res/values-el/cm_strings.xml b/res/values-el/cm_strings.xml
+index a22e654..9bcde98 100644
+--- a/res/values-el/cm_strings.xml
++++ b/res/values-el/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Φιλτράρισμα ειδοποιήσεων</string>
+   <string name="block_notifications_summary">Διαχείριση φίλτρων και ειδοποιήσεων που αγνοούνται</string>
+   <string name="no_filters_title">Δεν έχουν οριστεί φίλτρα</string>
+-  <string name="cmupdate_settings_title">Ενημερώσεις CyanogenMod</string>
+   <string name="update_recovery_title">Ενημέρωση Cyanogen recovery</string>
+   <string name="update_recovery_summary">Ενημέρωση της recovery με τις ενημερώσεις συστήματος</string>
+   <string name="update_recovery_on_warning">ΣΗΜΕΙΩΣΗ: Όταν αυτή η λειτουργία είναι ενεργοποιημένη, η εγκατεστημένη recovery σας θα αντικατασταθεί με αυτήν που περιλαμβάνεται στην τρέχουσα έκδοση του το λειτουργικού συστήματος.\n\nΗ recovery θα ενημερώνεται μαζί με τις αναβαθμίσεις στο σύστημά σας, βοηθώντας να εξασφαλισθεί η συμβατότητα με μελλοντικές εκδόσεις.\n\nΘέλετε να ενεργοποιήσετε αυτήν τη λειτουργία;</string>
+diff --git a/res/values-es/cm_strings.xml b/res/values-es/cm_strings.xml
+index d5947cd..d22d865 100644
+--- a/res/values-es/cm_strings.xml
++++ b/res/values-es/cm_strings.xml
+@@ -206,7 +206,7 @@
+   <string name="block_notifications_title">Filtrar notificaciones</string>
+   <string name="block_notifications_summary">Gestionar filtros y notificaciones bloqueadas</string>
+   <string name="no_filters_title">No hay filtros establecidos</string>
+-  <string name="cmupdate_settings_title">Actualizaciones CyanogenMod</string>
++  <string name="independentupdater_settings_title">Actualizaciones CyanogenMod</string>
+   <string name="update_recovery_title">Actualizar recovery</string>
+   <string name="update_recovery_summary">Actualizar recovery con las actualizaciones del sistema</string>
+   <string name="update_recovery_on_warning">AVISO: Con esta característica activada, el recovery instalado será reemplazado por uno incluido en la versión actual del sistema.\n\nEl recovery será actualizado junto con mejoras en el sistema, ayudando a garantizar la compatibilidad con versiones futuras.\n\n¿Quieres activar esta característica?</string>
+diff --git a/res/values-eu-rES/cm_strings.xml b/res/values-eu-rES/cm_strings.xml
+index 8d453db..2195cad 100644
+--- a/res/values-eu-rES/cm_strings.xml
++++ b/res/values-eu-rES/cm_strings.xml
+@@ -160,7 +160,6 @@
+   <string name="sms_security_check_limit_title">SMS mezu muga</string>
+   <string name="sms_security_check_limit_summary">Aplikazioek %d SMS mezu bidali ditzakete 30 minututan berrespena eskatu arte</string>
+   <string name="block_notifications_title">Jakinarazpenak iragazi</string>
+-  <string name="cmupdate_settings_title">CyanogenMod eguneraketak</string>
+   <string name="mod_version">CyanogenMod bertsioa</string>
+   <string name="mod_version_default">Ezezaguna</string>
+   <string name="build_date">Konpilatze data</string>
+diff --git a/res/values-fi/cm_strings.xml b/res/values-fi/cm_strings.xml
+index 3b9d8e2..75bd5f3 100644
+--- a/res/values-fi/cm_strings.xml
++++ b/res/values-fi/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Suodata ilmoitukset</string>
+   <string name="block_notifications_summary">Hallitse estettyjä ilmoituksia ja suodattimia</string>
+   <string name="no_filters_title">Suodattimia ei asetettu</string>
+-  <string name="cmupdate_settings_title">CyanogenMod-päivitykset</string>
+   <string name="update_recovery_title">Päivitä Cyanogen Recovery</string>
+   <string name="update_recovery_summary">Päivitä Recovery-tila järjestelmäpäivityksen aikana</string>
+   <string name="update_recovery_on_warning">HUOMAUTUS: Kun tämä toiminto on käytössä, asennettu Recovery-tila korvataan nykyisen käyttöjärjestelmän versiolla.\n\nRecovery-tilaa päivitetään yhdessä järjestelmäpäivitysten kanssa, varmistaaksemme yhteensopivuuden tulevien versioiden kanssa\n\nHaluatko ottaa toiminnon käyttöön?</string>
+diff --git a/res/values-fr/cm_strings.xml b/res/values-fr/cm_strings.xml
+index 3f6de15..acf103e 100644
+--- a/res/values-fr/cm_strings.xml
++++ b/res/values-fr/cm_strings.xml
+@@ -204,7 +204,6 @@
+   <string name="block_notifications_title">Filtre des notifications</string>
+   <string name="block_notifications_summary">Gérer les notifications ignorées et les filtres</string>
+   <string name="no_filters_title">Aucun filtre défini</string>
+-  <string name="cmupdate_settings_title">Mises à jour CyanogenMod</string>
+   <string name="update_recovery_title">Mettre à jour le recovery de Cyanogen</string>
+   <string name="update_recovery_summary">Mettre à jour le recovery avec les mises à jour système</string>
+   <string name="mod_version">Version CyanogenMod</string>
+diff --git a/res/values-hu/cm_strings.xml b/res/values-hu/cm_strings.xml
+index 92273b2..4e54ef2 100644
+--- a/res/values-hu/cm_strings.xml
++++ b/res/values-hu/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Értesítések szűrése</string>
+   <string name="block_notifications_summary">Figyelmen kívül hagyott értesítések és szűrők kezelése</string>
+   <string name="no_filters_title">Nincs szűrő beállítva</string>
+-  <string name="cmupdate_settings_title">CyanogenMod frissítések</string>
+   <string name="update_recovery_title">CM recovery frissítése</string>
+   <string name="update_recovery_summary">Rendszerfrissítések telepítése közben frissítse a recovery-t</string>
+   <string name="update_recovery_on_warning">FIGYELEM: Ha ezen funkció aktiválva van, a telepített recovery le lesz cserélve a jelenleg futó operációs rendszerének megfelelően.\n\nA recovery együtt lesz frissítve a rendszerrel, ezáltal biztosítva a kompatibilitást a jövőbeli verziókkal.\n\nBiztosan aktiválja a funkciót?</string>
+diff --git a/res/values-in/cm_strings.xml b/res/values-in/cm_strings.xml
+index 332a3eb..abf06eb 100644
+--- a/res/values-in/cm_strings.xml
++++ b/res/values-in/cm_strings.xml
+@@ -204,7 +204,6 @@
+   <string name="block_notifications_title">Notifikasi penyaringan</string>
+   <string name="block_notifications_summary">Kelola pemberitahuan yang diabaikan dan filter</string>
+   <string name="no_filters_title">Belum ada penyaring</string>
+-  <string name="cmupdate_settings_title">Pembaruan CyanogenMod</string>
+   <string name="mod_version">Versi CyanogenMod</string>
+   <string name="mod_version_default">Tidak diketahui</string>
+   <string name="model_name">Nama model</string>
+diff --git a/res/values-it/cm_strings.xml b/res/values-it/cm_strings.xml
+index 44c2632..9c12e60 100644
+--- a/res/values-it/cm_strings.xml
++++ b/res/values-it/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Filtra notifiche</string>
+   <string name="block_notifications_summary">Gestisci le notifiche ignorate e i filtri</string>
+   <string name="no_filters_title">Nessun filtro impostato</string>
+-  <string name="cmupdate_settings_title">Aggiornamento CyanogenMod</string>
+   <string name="update_recovery_title">Aggiorna recovery Cyanogenmod</string>
+   <string name="update_recovery_summary">Aggiorna la recovery con gli aggiornamenti del sistema</string>
+   <string name="update_recovery_on_warning">AVVISO: Quando questa funzionalità è attiva, la recovery installata sarà sostituita da una inclusa con la versione corrente del sistema.\n\nLa vostra recovery attuale verrà aggiornata con gli aggiornamenti di sistema, contribuendo a garantire la compatibilità con le future versioni.\n\nAttivare questa funzione?</string>
+diff --git a/res/values-iw/cm_strings.xml b/res/values-iw/cm_strings.xml
+index f94e794..5ce6fc6 100644
+--- a/res/values-iw/cm_strings.xml
++++ b/res/values-iw/cm_strings.xml
+@@ -188,7 +188,6 @@
+   <string name="block_notifications_title">סנן הודעות</string>
+   <string name="block_notifications_summary">נהל הודעות שהוחבאו ומסננים</string>
+   <string name="no_filters_title">לא הוגדרו מסננים</string>
+-  <string name="cmupdate_settings_title">עדכוני CyanogenMod</string>
+   <string name="mod_version">גרסת CyanogenMod</string>
+   <string name="mod_version_default">לא ידוע</string>
+   <string name="build_date">תאריך בנייה</string>
+diff --git a/res/values-ja/cm_strings.xml b/res/values-ja/cm_strings.xml
+index 53964c4..cd6f7a9 100644
+--- a/res/values-ja/cm_strings.xml
++++ b/res/values-ja/cm_strings.xml
+@@ -205,7 +205,6 @@
+   <string name="block_notifications_title">通知のフィルタリング</string>
+   <string name="block_notifications_summary">無視する通知やフィルターを管理する</string>
+   <string name="no_filters_title">フィルターが設定されていません</string>
+-  <string name="cmupdate_settings_title">CyanogenModアップデート</string>
+   <string name="update_recovery_title">Cyanogenリカバリーをアップデート</string>
+   <string name="update_recovery_summary">システムアップデートと同時にリカバリーをアップデートする</string>
+   <string name="update_recovery_on_warning">注意: この機能を有効にすると、インストールされているリカバリーは実行しているOSの現在のバージョンに含まれるリカバリーに変更されます。\n\nシステムのアップグレードと同時にリカバリーがアップデートされるので、今後のバージョンとの互換性の確保に繋がります。\n\nこの機能を有効にしますか？</string>
+diff --git a/res/values-ko/cm_strings.xml b/res/values-ko/cm_strings.xml
+index 6799b21..d147db6 100644
+--- a/res/values-ko/cm_strings.xml
++++ b/res/values-ko/cm_strings.xml
+@@ -205,7 +205,6 @@
+   <string name="block_notifications_title">알림 필터</string>
+   <string name="block_notifications_summary">무시할 알림 및 필터 관리</string>
+   <string name="no_filters_title">필터가 설정되지 않음</string>
+-  <string name="cmupdate_settings_title">CyanogenMod 업데이트</string>
+   <string name="update_recovery_title">Cyanogen 리커버리 업데이트</string>
+   <string name="update_recovery_summary">시스템을 업데이트할 때 리커버리 업데이트</string>
+   <string name="update_recovery_on_warning">주의: 이 기능이 활성화되면 기기의 리커버리가 현재의 OS에 포함된 리커버리로 대체됩니다.\n\n기기의 리커버리는 이 후 업데이트의 호환성을 확인하여 시스템 업그레이드와 같이 업데이트될 것입니다.\n\n이 기능을 활성화하시겠습니까?</string>
+diff --git a/res/values-ku/cm_strings.xml b/res/values-ku/cm_strings.xml
+index 7bbe019..8b7dce7 100644
+--- a/res/values-ku/cm_strings.xml
++++ b/res/values-ku/cm_strings.xml
+@@ -173,7 +173,6 @@
+   <string name="sms_security_check_limit_summary">بەرنامە ئەتوانرێت بنێرێت %d نامە لە 30 خولەک پێشی داواکردنی زانیاری</string>
+   <string name="block_notifications_title">فلتەرکردنی ئاگادارییه‌کان</string>
+   <string name="block_notifications_summary">به‌ڕێوه‌بردنی ئاگادارییه‌ پشتگوێخراوه‌کان</string>
+-  <string name="cmupdate_settings_title">نوێکردنه‌وه‌ی وەشانەکە</string>
+   <string name="mod_version">وەشانی کوردی</string>
+   <string name="mod_version_default">نەناسراو</string>
+   <string name="build_date">بنیاتنانی ڕۆژ</string>
+diff --git a/res/values-lb/cm_strings.xml b/res/values-lb/cm_strings.xml
+index 30235ba..eb6ade4 100644
+--- a/res/values-lb/cm_strings.xml
++++ b/res/values-lb/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Notifikatiounsfilter</string>
+   <string name="block_notifications_summary">Ignoréiert Notifikatiounen a Filteren geréieren</string>
+   <string name="no_filters_title">Keng Filtere gesat</string>
+-  <string name="cmupdate_settings_title">CyanogenMod-Aktualiséierungen</string>
+   <string name="update_recovery_title">Cyanogen-Recovery aktualiséieren</string>
+   <string name="update_recovery_summary">De Recovery-Programm zesumme mam System aktualiséieren</string>
+   <string name="update_recovery_off_warning">WARNUNG: Wann dës Funktioun deaktivéiert ass, gëtt däin installéierte Recovery-Programm net mat dengem System aktualiséiert.\n\nZukünfteg System-Aktualiséierungen loosse sech mat veraalten oder eegene Recovery-Programmer eventuell net installéierne.\n\nWëlls du dës Funktioun sécher deaktivéieren?</string>
+diff --git a/res/values-lt/cm_strings.xml b/res/values-lt/cm_strings.xml
+index e7d7b46..1bc49fb 100644
+--- a/res/values-lt/cm_strings.xml
++++ b/res/values-lt/cm_strings.xml
+@@ -207,7 +207,6 @@
+   <string name="block_notifications_title">Filtruoti pranešimus</string>
+   <string name="block_notifications_summary">Tvarkyti ignoruojamus pranešimus ir filtrus</string>
+   <string name="no_filters_title">Nenustatyti jokie filtrai</string>
+-  <string name="cmupdate_settings_title">„CyanogenMod“ atnaujinimai</string>
+   <string name="update_recovery_title">Atnaujinti „Cyanogen“ atkūrimo programą</string>
+   <string name="update_recovery_summary">Atnaujinti atkūrimo programą kartu su sistemos atnaujinimais</string>
+   <string name="update_recovery_on_warning">PRANEŠIMAS: Kai ši funkcija yra įjungta, jūsų įdiegta atkūrimo programa bus pakeista kartu su dabartinės versijos OS.\n\nJūsų atkūrimo programa bus atnaujinta kartu su sistemos atnaujinimais, padedant užtikrinti suderinamumą su būsimomis versijomis.\n\nAr norėtumėte įjungti šią funkciją?</string>
+diff --git a/res/values-lv/cm_strings.xml b/res/values-lv/cm_strings.xml
+index c685ad8..7a466b0 100644
+--- a/res/values-lv/cm_strings.xml
++++ b/res/values-lv/cm_strings.xml
+@@ -170,7 +170,6 @@
+   <string name="sms_security_check_limit_summary">Lietotnes var nosūtīt %d ziņas 30 minūtēs pirms nepieciešams apstiprinājums</string>
+   <string name="block_notifications_title">Filtra paziņojumi</string>
+   <string name="block_notifications_summary">Pārvaldīt ignorētos ziņojumus un filtrus</string>
+-  <string name="cmupdate_settings_title">CyanogenMod atjaunojumi</string>
+   <string name="mod_version">CyanogenMod versija</string>
+   <string name="mod_version_default">Nezināms</string>
+   <string name="build_date">Būvējuma datums</string>
+diff --git a/res/values-nb/cm_strings.xml b/res/values-nb/cm_strings.xml
+index a57abf4..f1c0164 100644
+--- a/res/values-nb/cm_strings.xml
++++ b/res/values-nb/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Filtrere varslinger</string>
+   <string name="block_notifications_summary">Administrere ignorerte varslinger og filtre</string>
+   <string name="no_filters_title">Ingen filtre valgt</string>
+-  <string name="cmupdate_settings_title">CyanogenMod oppdateringer</string>
+   <string name="update_recovery_title">Oppdater Cyanogen recovery</string>
+   <string name="update_recovery_summary">Oppdater recovery med systemoppdateringer</string>
+   <string name="update_recovery_on_warning">Merknad: Når denne funksjonen er oppdatert, vil din installerte recovery bli overskrivd av en som er inkludert i siste versjon av det kjørende OS.\n\nDin recvovery vil bli oppdatert sammen med systemoppdateringer, for å hjelpe deg med å beholde kompabiliteten med fremtidige versjoner.\n\nVil du aktivere denne funksjonen?</string>
+diff --git a/res/values-nl/cm_strings.xml b/res/values-nl/cm_strings.xml
+index 9da817b..dd4a652 100644
+--- a/res/values-nl/cm_strings.xml
++++ b/res/values-nl/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Meldingen filteren</string>
+   <string name="block_notifications_summary">Genegeerde meldingen en filters beheren</string>
+   <string name="no_filters_title">Geen filters ingesteld</string>
+-  <string name="cmupdate_settings_title">CyanogenMod-updates</string>
+   <string name="update_recovery_title">Cyanogen-recovery bijwerken</string>
+   <string name="update_recovery_summary">Recovery bijwerken met systeemupdates</string>
+   <string name="update_recovery_on_warning">Let op: wanneer deze functie is ingeschakeld, wordt uw huidige recovery vervangen door de recovery die met uw huidige besturingssysteem geleverd wordt.\n\nUw recovery wordt met systeemupdates ook bijgewerkt om compatibiliteit met toekomstige versies te garanderen.\n\nWilt u deze functie inschakelen?</string>
+diff --git a/res/values-pl/cm_strings.xml b/res/values-pl/cm_strings.xml
+index 72654f8..2f0a66d 100644
+--- a/res/values-pl/cm_strings.xml
++++ b/res/values-pl/cm_strings.xml
+@@ -171,7 +171,6 @@
+   <string name="sms_security_check_limit_summary">Aplikacje mogą wysłać %d wiadomości przez 30 minut, nim konieczne będzie potwierdzenie</string>
+   <string name="block_notifications_title">Filtrowanie powiadomień</string>
+   <string name="block_notifications_summary">Zarządzaj ignorowanymi powiadomieniami i filtrami</string>
+-  <string name="cmupdate_settings_title">Aktualizacje CyanogenMod</string>
+   <string name="mod_version">Wersja CyanogenMod</string>
+   <string name="mod_version_default">Nieznana</string>
+   <string name="build_date">Data kompilacji</string>
+diff --git a/res/values-pt-rBR/cm_strings.xml b/res/values-pt-rBR/cm_strings.xml
+index 1fd4a5d..7a323fb 100644
+--- a/res/values-pt-rBR/cm_strings.xml
++++ b/res/values-pt-rBR/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Filtrar notificações</string>
+   <string name="block_notifications_summary">Gerenciar notificações e filtros ignorados</string>
+   <string name="no_filters_title">Nenhum filtro definido</string>
+-  <string name="cmupdate_settings_title">Atualizações CyanogenMod</string>
+   <string name="update_recovery_title">Atualizar o recovery da Cyanogen</string>
+   <string name="update_recovery_summary">Atualizar o recovery com atualizações de sistema</string>
+   <string name="update_recovery_on_warning">AVISO: Quando este recurso é ativado, seu recovery será substituído pelo o que é incluído no sistema operacional em execução.\n\nSeu recovery será atualizado junto com o sistema, ajudando a garantir a compatibilidade com versões futuras.\n\nVocê que você gosta de ativar este recurso?</string>
+diff --git a/res/values-pt-rPT/cm_strings.xml b/res/values-pt-rPT/cm_strings.xml
+index a64c24c..a9dc11e 100644
+--- a/res/values-pt-rPT/cm_strings.xml
++++ b/res/values-pt-rPT/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Filtrar as notificações</string>
+   <string name="block_notifications_summary">Gerir notificações ignoradas e filtros</string>
+   <string name="no_filters_title">Sem filtros definidos</string>
+-  <string name="cmupdate_settings_title">Atualizações</string>
+   <string name="update_recovery_title">Atualizar a recuperação Cyanogen</string>
+   <string name="update_recovery_summary">Atualizar a recuperação com as atualizações do sistema</string>
+   <string name="update_recovery_on_warning">Aviso: Quando este recurso estiver ativado, a sua recuperação instalada será substituída por uma incluída na versão atual do SO.\n\nA sua recuperação será atualizada juntamente com as atualizações do seu sistema, ajudando a garantir a compatibilidade com futuras versões.\n\nQuer ativar este recurso?</string>
+diff --git a/res/values-ro/cm_strings.xml b/res/values-ro/cm_strings.xml
+index 4ecaada..bc56654 100644
+--- a/res/values-ro/cm_strings.xml
++++ b/res/values-ro/cm_strings.xml
+@@ -178,7 +178,6 @@
+   <string name="block_notifications_title">Filtru notificări</string>
+   <string name="block_notifications_summary">Gestionaţi notificările ignorate şi filtrele</string>
+   <string name="no_filters_title">Niciun filtru setat</string>
+-  <string name="cmupdate_settings_title">Actualizări CyanogenMod</string>
+   <string name="mod_version">versiune CyanogenMod</string>
+   <string name="mod_version_default">Necunoscut</string>
+   <string name="model_name">Nume model</string>
+diff --git a/res/values-ru/cm_strings.xml b/res/values-ru/cm_strings.xml
+index 6b39321..e35d4ff 100644
+--- a/res/values-ru/cm_strings.xml
++++ b/res/values-ru/cm_strings.xml
+@@ -207,7 +207,6 @@
+   <string name="block_notifications_title">Фильтр уведомлений</string>
+   <string name="block_notifications_summary">Настройка игнорируемых уведомлений и фильтров</string>
+   <string name="no_filters_title">Фильтр не установлен</string>
+-  <string name="cmupdate_settings_title">Обновления системы</string>
+   <string name="update_recovery_title">Обновлять режим восстановления</string>
+   <string name="update_recovery_summary">Перезаписывать раздел Recovery при установке обновлений</string>
+   <string name="update_recovery_on_warning">Когда эта функция включена, установленная прошивка режима восстановления будет перезаписана той, которая соответствует текущей версии ОС.\n\nРежим восстановления будет обновляться вместе с обновлениями системы, обеспечивая совместимость с будущими версиями.\n\nВключить использование этой функции?</string>
+diff --git a/res/values-si-rLK/cm_strings.xml b/res/values-si-rLK/cm_strings.xml
+index b183366..3ef8957 100644
+--- a/res/values-si-rLK/cm_strings.xml
++++ b/res/values-si-rLK/cm_strings.xml
+@@ -173,7 +173,6 @@
+   <string name="sms_security_check_limit_summary">තහවුරු කිරීම අවශ්‍යවීමට පෙර මිනිත්තු 30 තුල පණිවිඩ %d ක් යැවීමට යෙදුම් වෙත හැකියාව ඇත</string>
+   <string name="block_notifications_title">දැනුම්දීම් පෙරන්න</string>
+   <string name="block_notifications_summary">නොසලකා හැරූ දැනුම්දීම් සහ පෙරහන් හසුරුවන්න</string>
+-  <string name="cmupdate_settings_title">CyanogenMod යාවත්කාලීනයන්</string>
+   <string name="mod_version">CyanogenMod අනුවාදය</string>
+   <string name="mod_version_default">නොදනී</string>
+   <string name="build_date">නිමැවූ දිනය</string>
+diff --git a/res/values-sk/cm_strings.xml b/res/values-sk/cm_strings.xml
+index e4ab2fc..2cd8eae 100644
+--- a/res/values-sk/cm_strings.xml
++++ b/res/values-sk/cm_strings.xml
+@@ -207,7 +207,6 @@
+   <string name="block_notifications_title">Filtrovať oznámenia</string>
+   <string name="block_notifications_summary">Spravovať ignorované oznámenia a filtre</string>
+   <string name="no_filters_title">Nenastavené žiadne filtre</string>
+-  <string name="cmupdate_settings_title">Aktualizácie CyanogenMod</string>
+   <string name="update_recovery_title">Aktualizovať Cyanogen recovery</string>
+   <string name="update_recovery_summary">Aktualizovať recovery s aktualizáciami systému</string>
+   <string name="update_recovery_on_warning">UPOZORNENIE: Ak je táto funkcia povolená, vaša nainštalovaná recovery bude nahradená verziou, ktorá je súčasťou aktuálneho operačného systému.\n\nVaša recovery sa bude aktualizovať spolu so systémom, čím sa zaistuje kompatibilita s budúcim verziami.\n\nChcete povoliť túto funkciu?</string>
+diff --git a/res/values-sr/cm_strings.xml b/res/values-sr/cm_strings.xml
+index 0b7de73..e2fa044 100644
+--- a/res/values-sr/cm_strings.xml
++++ b/res/values-sr/cm_strings.xml
+@@ -208,7 +208,6 @@
+   <string name="block_notifications_title">Филтер обавештења</string>
+   <string name="block_notifications_summary">Уреди игнорисана обавештења и филтере</string>
+   <string name="no_filters_title">Нема постављених филтера</string>
+-  <string name="cmupdate_settings_title">Системска ажурирања</string>
+   <string name="update_recovery_title">Ажурирај Cyanogen опоравак</string>
+   <string name="update_recovery_summary">Ажурирај опоравак са системским ажурирањем</string>
+   <string name="update_recovery_on_warning">НАПОМЕНА: Када је ова функција омогућена, твој инсталирани опоравак ће бити замењен са једним укљученим у тренутну верзију покренутог OS-а.\n\nТвој опоравак ће бити ажуриран заједно са надоградњом вашег система, помажући да се осигура компатибилност са будућим верзијама.\n\nДа ли желите да омогућите ову функцију?</string>
+diff --git a/res/values-sv/cm_strings.xml b/res/values-sv/cm_strings.xml
+index b21585f..a2a717a 100644
+--- a/res/values-sv/cm_strings.xml
++++ b/res/values-sv/cm_strings.xml
+@@ -176,7 +176,6 @@
+   <string name="sms_security_check_limit_summary">Appar kan skicka %d meddelanden inom 30 minuter innan krav på bekräftelse</string>
+   <string name="block_notifications_title">Filtrera meddelanden</string>
+   <string name="block_notifications_summary">Hantera ignorerade aviseringar och filter</string>
+-  <string name="cmupdate_settings_title">CyanogenMod-uppdateringar</string>
+   <string name="mod_version">CyanogenMod-version</string>
+   <string name="mod_version_default">Okänd</string>
+   <string name="build_date">Byggdatum</string>
+diff --git a/res/values-th/cm_strings.xml b/res/values-th/cm_strings.xml
+index 6e5bf80..9f07511 100644
+--- a/res/values-th/cm_strings.xml
++++ b/res/values-th/cm_strings.xml
+@@ -173,7 +173,6 @@
+   <string name="sms_security_check_limit_summary">แอปสามารถส่ง %d ข้อความ ในเวลา 30 นาที ก่อนที่จะต้องการการยืนยัน</string>
+   <string name="block_notifications_title">ตัวกรองการแจ้งเตือน</string>
+   <string name="block_notifications_summary">จัดการการละเว้นการแจ้งเตือนและตัวกรอง</string>
+-  <string name="cmupdate_settings_title">ปรับปรุงรุ่น CyanogenMod</string>
+   <string name="mod_version">รุ่นของ CyanogenMod</string>
+   <string name="mod_version_default">ไม่ทราบ</string>
+   <string name="build_date">วันที่บิวด์</string>
+diff --git a/res/values-tr/cm_strings.xml b/res/values-tr/cm_strings.xml
+index 8b11762..827fa5d 100644
+--- a/res/values-tr/cm_strings.xml
++++ b/res/values-tr/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Filtre bildirimleri</string>
+   <string name="block_notifications_summary">Yoksayılan bildirimleri ve filtreleri yönet</string>
+   <string name="no_filters_title">Hiçbir filtre ayarlanmadı</string>
+-  <string name="cmupdate_settings_title">CyanogenMod güncellemeleri</string>
+   <string name="update_recovery_title">Cyanogen kurtarma modunu güncelle</string>
+   <string name="update_recovery_summary">Sistem güncellemesi ile kurtarma modunu güncelle</string>
+   <string name="update_recovery_on_warning">DİKKAT: Bu özellik etkinken, yüklü kurtarma modunuz mevcut İS sürümündeki mod ile değiştirilecektir. \n\nKurtarma modunuz sistem güncellemeleri ile birlikte güncellenecektir, böylelikle gelecek sürümler ile uyumluluk sağlanacaktır.\n\nBu özelliği etkinleştirmek ister misiniz?</string>
+diff --git a/res/values-uk/cm_strings.xml b/res/values-uk/cm_strings.xml
+index 178d9a9..0ff79e9 100644
+--- a/res/values-uk/cm_strings.xml
++++ b/res/values-uk/cm_strings.xml
+@@ -206,7 +206,6 @@
+   <string name="block_notifications_title">Фільтр сповіщень</string>
+   <string name="block_notifications_summary">Налаштування ігнорованих повідомлень і фільтрів</string>
+   <string name="no_filters_title">Немає фільтрів</string>
+-  <string name="cmupdate_settings_title">Оновлення CyanogenMod</string>
+   <string name="mod_version">Версія CyanogenMod</string>
+   <string name="mod_version_default">Невідомо</string>
+   <string name="model_name">Назва моделі</string>
+diff --git a/res/values-zh-rCN/cm_strings.xml b/res/values-zh-rCN/cm_strings.xml
+index 2408e25..17314de 100644
+--- a/res/values-zh-rCN/cm_strings.xml
++++ b/res/values-zh-rCN/cm_strings.xml
+@@ -205,7 +205,6 @@
+   <string name="block_notifications_title">通知过滤</string>
+   <string name="block_notifications_summary">管理已忽略的通知和过滤器</string>
+   <string name="no_filters_title">没有设置过滤</string>
+-  <string name="cmupdate_settings_title">CyanogenMod 更新</string>
+   <string name="update_recovery_title">更新 Cyanogen 恢复模式</string>
+   <string name="update_recovery_summary">使用系统更新来更新恢复模式</string>
+   <string name="update_recovery_on_warning">注意：启用此功能后，您已安装的恢复模式会被正在运行的系统所包含的恢复模式所替换。\n\n您的恢复模式会随着系统一起更新，以确保对未来版本的兼容性。\n\n您确定启用此功能？</string>
+diff --git a/res/values-zh-rHK/cm_strings.xml b/res/values-zh-rHK/cm_strings.xml
+index dd0bae1..ff52fc8 100644
+--- a/res/values-zh-rHK/cm_strings.xml
++++ b/res/values-zh-rHK/cm_strings.xml
+@@ -149,7 +149,6 @@
+   <string name="sms_security_check_limit_summary">在使用者確認之前，應用程式在 30 分鐘內只能發送 %d 條訊息</string>
+   <string name="block_notifications_title">過濾器通知</string>
+   <string name="block_notifications_summary">管理被忽略的通知和過濾器</string>
+-  <string name="cmupdate_settings_title">CyanogenMod 更新</string>
+   <string name="mod_version">CyanogenMod 版本</string>
+   <string name="mod_version_default">不明</string>
+   <string name="build_date">版本日期</string>
+diff --git a/res/values-zh-rTW/cm_strings.xml b/res/values-zh-rTW/cm_strings.xml
+index 05c405f..6ef0201 100644
+--- a/res/values-zh-rTW/cm_strings.xml
++++ b/res/values-zh-rTW/cm_strings.xml
+@@ -173,7 +173,6 @@
+   <string name="sms_security_check_limit_summary">在使用者認可之前，應用程式在 30 分鐘內只能傳送 %d 條訊息</string>
+   <string name="block_notifications_title">篩選通知</string>
+   <string name="block_notifications_summary">管理已忽略的通知與篩選器</string>
+-  <string name="cmupdate_settings_title">CyanogenMod 更新</string>
+   <string name="mod_version">CyanogenMod 版本</string>
+   <string name="mod_version_default">未知</string>
+   <string name="build_date">版本日期</string>
+diff --git a/res/values/cm_strings.xml b/res/values/cm_strings.xml
+index e447286..45f0a94 100644
+--- a/res/values/cm_strings.xml
++++ b/res/values/cm_strings.xml
+@@ -265,8 +265,8 @@
+     <string name="block_notifications_summary">Manage ignored notifications and filters</string>
+     <string name="no_filters_title">No filters set</string>
+ 
+-    <!-- CM Updater -->
+-    <string name="cmupdate_settings_title">CyanogenMod updates</string>
++    <!-- Independent Updates -->
++    <string name="independentupdater_settings_title">CyanogenMod Updates</string>
+ 
+     <!-- Settings switch for updating Cyanogen recovery -->
+     <string name="update_recovery_title">Update Cyanogen recovery</string>
+diff --git a/res/xml/device_info_settings.xml b/res/xml/device_info_settings.xml
+index 874a3cd..907ce6b 100644
+--- a/res/xml/device_info_settings.xml
++++ b/res/xml/device_info_settings.xml
+@@ -32,14 +32,14 @@
+                     android:targetPackage="@string/additional_system_update"
+                     android:targetClass="@string/additional_system_update_menu" />
+         </PreferenceScreen>
+-
+-        <!-- CyanogenMod Updates -->
+-        <PreferenceScreen android:key="cm_updates"
+-                android:title="@string/cmupdate_settings_title"
++        
++        <!-- Independent Updates -->
++        <PreferenceScreen android:key="independent_updates"
++                android:title="@string/independentupdater_settings_title"
+                 android:summary="@string/system_update_settings_list_item_summary">
+             <intent android:action="android.intent.action.MAIN"
+-                    android:targetPackage="com.cyanogenmod.updater"
+-                    android:targetClass="com.cyanogenmod.updater.UpdatesSettings" />
++                    android:targetPackage="com.ota.updates"
++                    android:targetClass="com.ota.updates.activities.MainActivity" />
+         </PreferenceScreen>
+ 
+         <!-- Advanced mode -->
+diff --git a/src/com/android/settings/DeviceInfoSettings.java b/src/com/android/settings/DeviceInfoSettings.java
+index 54b6513..718dc33 100644
+--- a/src/com/android/settings/DeviceInfoSettings.java
++++ b/src/com/android/settings/DeviceInfoSettings.java
+@@ -85,7 +85,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
+     private static final String KEY_SAFETY_LEGAL = "safetylegal";
+     private static final String KEY_MOD_VERSION = "mod_version";
+     private static final String KEY_MOD_BUILD_DATE = "build_date";
+-    private static final String KEY_CM_UPDATES = "cm_updates";
++    private static final String KEY_INDEPENDENT_UPDATES = "independent_updates";
+ 
+     static final int TAPS_TO_BE_A_DEVELOPER = 7;
+ 
+@@ -130,9 +130,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
+ 
+         // Only the owner should see the Updater settings, if it exists
+         if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
+-            removePreferenceIfPackageNotInstalled(findPreference(KEY_CM_UPDATES));
++            removePreferenceIfPackageNotInstalled(findPreference(KEY_INDEPENDENT_UPDATES));
+         } else {
+-            getPreferenceScreen().removePreference(findPreference(KEY_CM_UPDATES));
++            getPreferenceScreen().removePreference(findPreference(KEY_INDEPENDENT_UPDATES));
+         }
+ 
+         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
+-- 
+1.9.5.github.0
+
