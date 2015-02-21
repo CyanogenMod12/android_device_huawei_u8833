@@ -20,6 +20,8 @@
 # Inherit from the common msm7x27a definitions
 -include device/huawei/msm7x27a-common/BoardConfigCommon.mk
 
+CM_BUILDTYPE := NIGHTLY
+
 # Architecture and CPU
 TARGET_CPU_SMP := true
 

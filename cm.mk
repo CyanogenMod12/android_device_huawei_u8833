@@ -20,6 +20,8 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/huawei/u8833/full_u8833.mk)
 
+CM_BUILDTYPE := NIGHTLY
+
 # Correct boot animation size for the screen
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
