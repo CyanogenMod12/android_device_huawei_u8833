@@ -52,6 +52,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libril-qc-qmi-1.so \
     ro.telephony.ril.config=qcomdsds,skippinpukcount,signalstrength \
     ro.telephony.ril_class=HuaweiRIL
+    
+# F2FS
+PRODUCT_PACKAGES += \
+    e2fsck \
+    fsck_msdos \
+    fsck.f2fs \
+    mkfs.f2fs
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
